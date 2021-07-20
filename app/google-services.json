@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "799564314362",
+    "project_id": "kebappa-3b9a8",
+    "storage_bucket": "kebappa-3b9a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799564314362:android:1bc8a7718a18d901033b43",
+        "android_client_info": {
+          "package_name": "lt.vsc.kebappa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799564314362-v0avp21jupgmcht01j1f77c2q2eeogfo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDOYW7CF3igmHoHIWdbKCxc70mPqPVbA0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799564314362-v0avp21jupgmcht01j1f77c2q2eeogfo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

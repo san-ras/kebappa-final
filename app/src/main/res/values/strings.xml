@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Kebappa</string>
+    <string name="action_settings">Settings</string>
+    <string name="logo">Logo</string>
+    <string name="k">K</string>
+    <string name="i">I</string>
+    <string name="u_sakyti">Užsakyti</string>
+    <string name="registracija">Registracija</string>
+    <string name="meniu">MENIU</string>
+    <string name="language">Language</string>
+    <string name="_1_year_exp">1 Year exp</string>
+</resources>

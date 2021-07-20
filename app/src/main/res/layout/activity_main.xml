@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="245dp"
+        android:layout_height="149dp"
+        android:layout_marginTop="8dp"
+        android:clickable="false"
+        android:contentDescription="@string/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kebappa_logo" />
+
+    <ImageView
+        android:id="@+id/imgHistory"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:contentDescription="@string/logo"
+        android:foreground="@drawable/order_history"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgCart"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:clickable="true"
+        android:contentDescription="@string/logo"
+        android:foreground="@drawable/shopping_cart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/orderButton1"
+        android:layout_width="147dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="32dp"
+        android:background="#EF1212"
+        android:text="@string/u_sakyti"
+        app:backgroundTint="#EF1212"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/registrationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="32dp"
+        android:background="#EF1212"
+        android:text="@string/registracija"
+        app:backgroundTint="#EF1212"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:layout_width="384dp"
+        android:layout_height="455dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/orderButton1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kebabai su jautiena"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Mažas" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/textView30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="3.50 eur" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <ImageButton
+                        android:id="@+id/plusSmallBeefButton"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:verticalScrollbarPosition="right"
+                        app:srcCompat="@drawable/red_plus" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Didelis" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/textView26"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="4.00 eur" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <ImageButton
+                        android:id="@+id/plusBigBeefButton"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:verticalScrollbarPosition="right"
+                        app:srcCompat="@drawable/red_plus" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="XXL" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="5.00 eur" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <ImageButton
+                        android:id="@+id/plusXxlBeefButton"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:verticalScrollbarPosition="right"
+                        app:srcCompat="@drawable/red_plus" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Lėkštėje" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="5.00 eur" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <ImageButton
+                        android:id="@+id/plusPlateBeefButton"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:verticalScrollbarPosition="right"
+                        app:srcCompat="@drawable/red_plus" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kebabai su vištiena"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Mažas" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="3.50 eur" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <ImageButton
+                        android:id="@+id/plusSmallChickenButton"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:verticalScrollbarPosition="right"
+                        app:srcCompat="@drawable/red_plus" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Didelis" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="4.00 eur" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <ImageButton
+                        android:id="@+id/plusBigChickenButton"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:verticalScrollbarPosition="right"
+                        app:srcCompat="@drawable/red_plus" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="XXL" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="5.00 eur" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <ImageButton
+                        android:id="@+id/plusXxlChickenButton"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:verticalScrollbarPosition="right"
+                        app:srcCompat="@drawable/red_plus" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Lėkštėje" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="5.00 eur" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <ImageButton
+                        android:id="@+id/plusPlateChickenButton"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:verticalScrollbarPosition="right"
+                        app:srcCompat="@drawable/red_plus" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView38"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vegetariški kebabai"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Mažas" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="3.50 eur" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <ImageButton
+                        android:id="@+id/plusSmallVegButton"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:verticalScrollbarPosition="right"
+                        app:srcCompat="@drawable/red_plus" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Didelis" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="4.00 eur" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <ImageButton
+                        android:id="@+id/plusBigVegButton"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:verticalScrollbarPosition="right"
+                        app:srcCompat="@drawable/red_plus" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="XXL" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="5.00 eur" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <ImageButton
+                        android:id="@+id/plusXxlVegButton"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:verticalScrollbarPosition="right"
+                        app:srcCompat="@drawable/red_plus" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Lėkštėje" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="5.00 eur" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <ImageButton
+                        android:id="@+id/plusPlateVegButton"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:verticalScrollbarPosition="right"
+                        app:srcCompat="@drawable/red_plus" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView39"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bulvytės ir gėrimai"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Bulvytės" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/textView35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="2.00 eur" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <ImageButton
+                        android:id="@+id/plusFriesButton"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:verticalScrollbarPosition="right"
+                        app:srcCompat="@drawable/red_plus" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Coca-Cola" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="1.10 eur" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <ImageButton
+                        android:id="@+id/plusColaButton"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:verticalScrollbarPosition="right"
+                        app:srcCompat="@drawable/red_plus" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Fanta" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/textView32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="1.10 eur" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <ImageButton
+                        android:id="@+id/plusFantaButton"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:verticalScrollbarPosition="right"
+                        app:srcCompat="@drawable/red_plus" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Sprite" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="TextView" />
+
+                    <Space
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent" />
+
+                    <ImageButton
+                        android:id="@+id/plusSpriteButton"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:verticalScrollbarPosition="right"
+                        app:srcCompat="@drawable/red_plus" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp" />
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
