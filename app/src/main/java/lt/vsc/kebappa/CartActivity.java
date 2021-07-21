@@ -52,8 +52,29 @@ public class CartActivity extends AppCompatActivity {
         });
 
         setupListView(cartItems);
-        System.out.println();
+
+
+
+        Button cancelButton = findViewById(R.id.cancelButton);
+
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                    CartInProgress.clear();
+
+
+                Intent intent = new Intent(CartActivity.this, MainActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+
     }
+
+
+
 
     private void setupListView(List<Item> items) {
         ListView cartList = findViewById(R.id.cartList);

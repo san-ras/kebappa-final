@@ -41,6 +41,7 @@ public class HistoryActivity extends AppCompatActivity {
 
         List<List> allOrders = new ArrayList();
 
+
         ListView orderList = findViewById(R.id.orderHistoryList);
 
         ArrayAdapter<List> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, allOrders);
