@@ -14,7 +14,7 @@ public class Item {
 
     @Override
     public String toString(){
-        String info = title + "\r\nKiekis: " + quantity + "\r\nVnt. kaina: " + price + " €";
+        String info = title + "\r\nKiekis: " + quantity + "\r\nVieneto kaina: " + price + " €";
         return info;
     }
 }

@@ -17,6 +17,8 @@ import java.util.List;
 
 import lt.vsc.kebappa.database.DatabaseDataWorker;
 
+import static lt.vsc.kebappa.DatabaseWorker.worker;
+
 public class HistoryActivity extends AppCompatActivity {
 
     @Override
@@ -39,8 +41,9 @@ public class HistoryActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_history);
 
-        List<List> allOrders = new ArrayList();
 
+        List<List> allOrders = new ArrayList();
+        allOrders.add(worker.getAllOrders());
 
         ListView orderList = findViewById(R.id.orderHistoryList);
 

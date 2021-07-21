@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, CartActivity.class);
                     startActivity(intent);
                 } else {
-                    Snackbar.make(v, "Išsirinkite -_-", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(v, "Pasirinkite produktą!", Snackbar.LENGTH_LONG).show();
                 }
 
 
@@ -128,8 +128,6 @@ public class MainActivity extends AppCompatActivity {
         CreateAddButton(itemCola, pickedItems, R.id.plusColaButton);
         CreateAddButton(itemFanta, pickedItems, R.id.plusFantaButton);
         CreateAddButton(itemSprite, pickedItems, R.id.plusSpriteButton);
-
-        //   DatabaseDataWorker worker = new DatabaseDataWorker();
 
 
     }

@@ -53,8 +53,6 @@ public class CartActivity extends AppCompatActivity {
 
         setupListView(cartItems);
 
-
-
         Button cancelButton = findViewById(R.id.cancelButton);
 
         cancelButton.setOnClickListener(new View.OnClickListener() {

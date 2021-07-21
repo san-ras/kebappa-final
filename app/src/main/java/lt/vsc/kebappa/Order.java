@@ -9,12 +9,19 @@ public class Order {
     public double totalAmount = 0;
     public LocalDateTime dateCreated;
     public List<Item> allItemsInThisOrder;
-
+    public String dateCreatedString = String.valueOf(dateCreated);
 
     public Order(List<Item> list) {
         this.allItemsInThisOrder = list;
         this.dateCreated = LocalDateTime.now();
     }
+
+    public Order(int orderId, double totalPrice, String dateCreated) {
+        this.orderId = orderId;
+        this.totalAmount = totalPrice;
+        this.dateCreatedString = dateCreated;
+    }
+
 
     public double calculateTotalAmount() {
         for (Item item : allItemsInThisOrder) {
@@ -42,5 +49,11 @@ public class Order {
 
     public void setOrderId(long insertedOrderId) {
         orderId = insertedOrderId;
+    }
+
+    @Override
+    public String toString(){
+        String info = "\n\nUžsakymas nr. " + orderId + ",\nSuma: " + getTotalAmount() + " €,\n" + dateCreatedString.substring(0, 10);
+        return info;
     }
 }
